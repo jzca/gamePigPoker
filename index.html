@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="http://unicorn-ui.com/buttons/css/buttons.css">
+        <title>Pig Game</title>
+    </head>
+
+    <body style= "height:100vh !important;">
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">0</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">0</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">0</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Pick cards</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <button class="btn-score">
+            <input type="number" id="input-score" placeholder="Winner Score: Must Fill">
+            <!-- <button type="submit" id="btn-sub"></button> -->
+            <button class="btn-rules">The Rules</button>
+            </button>
+            <img src="img/dice-14.png" alt="Dice" class="dice">
+            <img src="img/dice-15.png" alt="Dice" class="dice2">
+        </div>
+        <script src='https://cdn.jsdelivr.net/npm/sweetalert2@7.28.8/dist/sweetalert2.all.min.js'></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
