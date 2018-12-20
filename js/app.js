@@ -1,4 +1,3 @@
-if (navigator.serviceWorker){
 navigator.serviceWorker.register('https://github.com/jzca/gamePigPoker/blob/master/sw.js')
 .then(()=>{
 	console.log('Service Worker Installed')
@@ -6,7 +5,6 @@ navigator.serviceWorker.register('https://github.com/jzca/gamePigPoker/blob/mast
 .catch(()=>{
 	console.log('Service Worker FAILED! to Install')
 })
-}
 
 /*
 GAME RULES:
