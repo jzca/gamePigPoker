@@ -1,5 +1,5 @@
 if (navigator.serviceWorker){
-navigator.serviceWorker.register('/../sw.js')
+navigator.serviceWorker.register('gamePigPoker/sw.js')
 .then(()=>{
 	console.log('Service Worker Installed')
 })
