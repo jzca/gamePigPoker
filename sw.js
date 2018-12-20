@@ -41,8 +41,8 @@ self.addEventListener('install', function (event) {
 					'/img/dice-13.png',
 					'/img/dice-14.png',
 					'/img/dice-15.png',
-					'/',
-					'/index.html'
+					'/gamePigPoker/',
+					'gamePigPoker/index.html'
 				]
 			);
 		})
