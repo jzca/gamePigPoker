@@ -21,7 +21,7 @@ self.addEventListener('install', function (event) {
 		caches.open(staticCache).then(function (cache) {
 			return cache.addAll(
 				[
-					'https://cdn.jsdelivr.net/npm/sweetalert2@7.28.8/dist/sweetalert2.all.min.js',
+					'js/sweetalert2.all.min.js',
 					'css/style.css',
 					'css/font.css',
 					'js/app.js',
@@ -42,7 +42,7 @@ self.addEventListener('install', function (event) {
 					'img/dice-14.png',
 					'img/dice-15.png',
 					'/',
-					'/index.html'
+					'index.html'
 				]
 			);
 		})

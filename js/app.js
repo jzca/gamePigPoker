@@ -1,11 +1,16 @@
-navigator.serviceWorker.register('sw.js', {scope: 'gamePigPoker/'})
-.then(()=>{
-	console.log('Service Worker Installed')
-})
-.catch(()=>{
-	console.log('Service Worker FAILED! to Install')
-})
-
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('sw.js', {
+            scope: 'gamePigPoker/'
+        })
+        .then(() => {
+            console.log('Service Worker Installed')
+        })
+        .catch(() => {
+            console.log('Service Worker FAILED! to Install')
+            // navigator.serviceWorker.register('../sw.js')
+            // console.log('Service Worker Installed')
+        })
+}
 /*
 GAME RULES:
 
@@ -46,7 +51,7 @@ const newGame = document.querySelector('.btn-new');
 
 const wonSco = document.getElementsByClassName('btn-score');
 const inputSco = document.getElementById('input-score');
-const rules =document.querySelector('.btn-rules')
+const rules = document.querySelector('.btn-rules')
 let scoreUpdater = inputSco.value;
 
 
@@ -54,20 +59,20 @@ let scoreUpdater = inputSco.value;
 
 rollIt.addEventListener('click', function () {
     // if (scoreUpdater === parseInt()||(this.value===parseInt())) {
-        //     this.value=parseInt(100)
-        //     scoreUpdater = parseInt(100);
-        // } 
-        if (scoreUpdater == "") {
-            scoreUpdater = 100;
-        } else if (inputSco.value == NaN){
-            scoreUpdater = 100;
-        }else if (inputSco.value == 0){
-            scoreUpdater = 100;
-        } else{
-            console.log('roll' + scoreUpdater);
-            scoreUpdater = parseInt(inputSco.value) ;
-        }
-        // console.log('roll' + scoreUpdater);
+    //     this.value=parseInt(100)
+    //     scoreUpdater = parseInt(100);
+    // } 
+    if (scoreUpdater == "") {
+        scoreUpdater = 100;
+    } else if (inputSco.value == NaN) {
+        scoreUpdater = 100;
+    } else if (inputSco.value == 0) {
+        scoreUpdater = 100;
+    } else {
+        console.log('roll' + scoreUpdater);
+        scoreUpdater = parseInt(inputSco.value);
+    }
+    // console.log('roll' + scoreUpdater);
 
     if (!gameOver) {
         let random = Math.floor((Math.random() * 15) + 1);
@@ -128,7 +133,7 @@ holdIt.addEventListener('click', function () {
     if (scoreUpdater === "") {
         scoreUpdater = 100;
     } else {
-        scoreUpdater = parseInt(inputSco.value) ;
+        scoreUpdater = parseInt(inputSco.value);
     }
     if (!gameOver) {
 
@@ -180,7 +185,7 @@ holdIt.addEventListener('click', function () {
                 wonMsg.textContent = '';
             }, 3500);
         }
-        
+
     }
 });
 
@@ -216,10 +221,10 @@ newGame.addEventListener('click', function () {
 
 });
 
-rules.addEventListener('click', function(){
+rules.addEventListener('click', function () {
     swal({
 
-        imageUrl: 'therule.png',
+        imageUrl: 'img/therule.png',
         imageHeight: 300,
         imageAlt: 'A tall image'
     });
@@ -227,13 +232,13 @@ rules.addEventListener('click', function(){
 
 // if (!gameOver) {
 
-    // inputSco.addEventListener('input', function () {
-    //     if (scoreUpdater === "") {
-    //         scoreUpdater = 100;
-    //     } else {
-    //         scoreUpdater = parseInt(this.value) ;
-    //     }
-    // });
+// inputSco.addEventListener('input', function () {
+//     if (scoreUpdater === "") {
+//         scoreUpdater = 100;
+//     } else {
+//         scoreUpdater = parseInt(this.value) ;
+//     }
+// });
 //}
 
 
