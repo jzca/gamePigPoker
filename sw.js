@@ -1,6 +1,6 @@
 //How to put things into Caches, during installing, before activate.
 // L6 Open or If no Cache, create it. index be detailed
-const staticCache = 'my-cache-6';
+const staticCache = 'my-cache-8';
 
 self.addEventListener('activate', event => {
 	event.waitUntil(
@@ -21,6 +21,7 @@ self.addEventListener('install', function (event) {
 		caches.open(staticCache).then(function (cache) {
 			return cache.addAll(
 				[
+					'img/back.jpg',
 					'img/dice-1.png',
 					'img/dice-2.png',
 					'img/dice-3.png',
