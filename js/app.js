@@ -1,7 +1,5 @@
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('sw.js', {
-            scope: 'gamePigPoker/'
-        })
+    navigator.serviceWorker.register('sw.js')
         .then(() => {
             console.log('Service Worker Installed')
         })
