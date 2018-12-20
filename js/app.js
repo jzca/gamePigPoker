@@ -1,4 +1,4 @@
-navigator.serviceWorker.register('/sw.js', {scope: 'gamePigPoker/'})
+navigator.serviceWorker.register('/sw.js', {scope: '/gamePigPoker/'})
 .then(()=>{
 	console.log('Service Worker Installed')
 })
