@@ -1,6 +1,6 @@
 //How to put things into Caches, during installing, before activate.
 // L6 Open or If no Cache, create it. index be detailed
-const staticCache = 'my-cache-3';
+const staticCache = 'my-cache-4';
 
 self.addEventListener('activate', event => {
 	event.waitUntil(
@@ -21,6 +21,7 @@ self.addEventListener('install', function (event) {
 		caches.open(staticCache).then(function (cache) {
 			return cache.addAll(
 				[
+					'js/sweetalert2.all.min.js',
 					'css/style.css',
 					'css/font.css',
 					'js/app.js'
