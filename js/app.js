@@ -1,5 +1,5 @@
 if (navigator.serviceWorker){
-navigator.serviceWorker.register('gamePigPoker/sw.js')
+navigator.serviceWorker.register('https://github.com/jzca/gamePigPoker/blob/master/sw.js')
 .then(()=>{
 	console.log('Service Worker Installed')
 })
