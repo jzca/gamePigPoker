@@ -1,6 +1,6 @@
 // How to put things into Caches, during installing, before activate.
 // Open or If no Cache, create it. index be detailed
-const staticCache = 'my-cache-a';
+const staticCache = 'my-cache-1';
 
 self.addEventListener('activate', event => {
 	event.waitUntil(
