@@ -5,10 +5,9 @@ if (navigator.serviceWorker) {
         })
         .catch(() => {
             console.log('Service Worker FAILED! to Install')
-            // navigator.serviceWorker.register('../sw.js')
-            // console.log('Service Worker Installed')
         })
 }
+
 /*
 GAME RULES:
 
@@ -19,7 +18,6 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
-//let currentScore = 0;
 
 let currentScoreA = 0;
 let currentScoreB = 0;
