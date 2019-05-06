@@ -48,7 +48,7 @@ const newGame = document.querySelector('.btn-new');
 const wonSco = document.getElementsByClassName('btn-score');
 const inputSco = document.getElementById('input-score');
 const rules = document.querySelector('.btn-rules')
-let scoreUpdater = 100;
+let scoreUpdater = inputSco.value;
 
 
 
@@ -58,15 +58,15 @@ rollIt.addEventListener('click', function () {
     //     this.value=parseInt(100)
     //     scoreUpdater = parseInt(100);
     // } 
-    // if (scoreUpdater == "" ||
-    //     inputSco.value == null ||
-    //     inputSco.value == 0 ||
-    //     inputSco.value == NaN) {
-    //     scoreUpdater = 100;
-    // } else {
-    //     console.log('roll: ' + scoreUpdater);
-    //     scoreUpdater = parseInt(inputSco.value);
-    // }
+    if (scoreUpdater == "" ||
+        inputSco.value == null ||
+        inputSco.value == 0 ||
+        inputSco.value == NaN) {
+        scoreUpdater = 100;
+    } else {
+        // console.log('roll: ' + scoreUpdater);
+        scoreUpdater = parseInt(inputSco.value);
+    }
     // console.log('roll' + scoreUpdater);
 
     if (!gameOver) {
@@ -127,15 +127,15 @@ holdIt.addEventListener('click', function () {
     //     scoreUpdater = parseInt(100);
     // }
 
-    // if (scoreUpdater == "" ||
-    //     inputSco.value == null ||
-    //     inputSco.value == 0 ||
-    //     inputSco.value == NaN) {
-    //     scoreUpdater = 100;
-    // } else {
-    //     console.log('hold: ' + scoreUpdater);
-    //     scoreUpdater = parseInt(inputSco.value);
-    // }
+    if (scoreUpdater == "" ||
+        inputSco.value == null ||
+        inputSco.value == 0 ||
+        inputSco.value == NaN) {
+        scoreUpdater = 100;
+    } else {
+        // console.log('hold: ' + scoreUpdater);
+        scoreUpdater = parseInt(inputSco.value);
+    }
 
     if (!gameOver) {
 
