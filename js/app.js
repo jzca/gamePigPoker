@@ -48,7 +48,7 @@ const newGame = document.querySelector('.btn-new');
 const wonSco = document.getElementsByClassName('btn-score');
 const inputSco = document.getElementById('input-score');
 const rules = document.querySelector('.btn-rules')
-let scoreUpdater = inputSco.value;
+let scoreUpdater = 100;
 
 
 
@@ -58,16 +58,15 @@ rollIt.addEventListener('click', function () {
     //     this.value=parseInt(100)
     //     scoreUpdater = parseInt(100);
     // } 
-    if (scoreUpdater == "") {
-        scoreUpdater = 100;
-    } else if (inputSco.value == NaN) {
-        scoreUpdater = 100;
-    } else if (inputSco.value == 0) {
-        scoreUpdater = 100;
-    } else {
-        console.log('roll' + scoreUpdater);
-        scoreUpdater = parseInt(inputSco.value);
-    }
+    // if (scoreUpdater == "" ||
+    //     inputSco.value == null ||
+    //     inputSco.value == 0 ||
+    //     inputSco.value == NaN) {
+    //     scoreUpdater = 100;
+    // } else {
+    //     console.log('roll: ' + scoreUpdater);
+    //     scoreUpdater = parseInt(inputSco.value);
+    // }
     // console.log('roll' + scoreUpdater);
 
     if (!gameOver) {
@@ -122,15 +121,22 @@ rollIt.addEventListener('click', function () {
 
 holdIt.addEventListener('click', function () {
     console.log('hold' + scoreUpdater);
-    // if (scoreUpdater === parseInt()||(this.value===parseInt())) {
-    //     this.value=parseInt(100)
+
+    // if (scoreUpdater === parseInt() || (this.value === parseInt())) {
+    //     this.value = parseInt(100)
     //     scoreUpdater = parseInt(100);
-    // } 
-    if (scoreUpdater === "") {
-        scoreUpdater = 100;
-    } else {
-        scoreUpdater = parseInt(inputSco.value);
-    }
+    // }
+
+    // if (scoreUpdater == "" ||
+    //     inputSco.value == null ||
+    //     inputSco.value == 0 ||
+    //     inputSco.value == NaN) {
+    //     scoreUpdater = 100;
+    // } else {
+    //     console.log('hold: ' + scoreUpdater);
+    //     scoreUpdater = parseInt(inputSco.value);
+    // }
+
     if (!gameOver) {
 
         if (currentPlayer === 1) {
